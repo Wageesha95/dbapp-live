@@ -40,7 +40,10 @@ def divisions(request):
 def division(request, division_id):
     try:
         division = Division.objects.get(pk=division_id)
+        farms = Farm.objects.filter(division__id = division_id)
     except Farm.DoesNotExist:
         raise Http404("Division does not exist")
-    context = {"division": division}
+    context = {"division": division,
+                "farms":farms
+    }
     return render(request, "divisions/division.html", context)

@@ -11,6 +11,16 @@
         <li>Division Code : {{division.division_code}} </li>
         
     </ul>
+
+    Farms :
+
+    {% for farm in farms %}
+        <li>
+            <a href ='{% url 'farm' farm.id %}'>{{farm.farm_name}}</a>
+        </li>
+    {% endfor %}
+    <br>
+    <hr>
     <a href ='{%url 'divisions'%}'>Back to All Divisions</a>
     <br>
     <a href ='{% url 'home'%}'>Back to Home</a>
