@@ -25,12 +25,13 @@ SECRET_KEY = '0s^#4-o1%wdd6zqk5j(n)dp)w9ta30eks4aa8@p$62*2(zd_6h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["wagtest2020.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "farms.apps.FarmsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
